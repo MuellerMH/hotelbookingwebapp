@@ -33,11 +33,13 @@ Weekly 20 pm UTC +1 Europe time on Monday
 * Setting up PHPUnit with Docker
 * Setting up MariaDB with Docker
 
-**Session 2:** In the second session we create a database model, the PHP model and the PHP controller, and a simple micro service
-
+-- 
 * Database model
 * PHP Model
 * PHP Controller
+
+**Session 2:** In the second session we create a database model, the PHP model and the PHP controller, and a simple micro service
+
 * Simple micro service
 
 **Session 3:** In the third session we create the frontend with booking form and call the micro service
@@ -58,3 +60,7 @@ Create rooms and rates, cancelation policies, avaibility
 **Tools:**
 Sublime
 MySQL Workbench
+
+
+# start phpunit testing
+docker run -i -t --rm -v "$(pwd):/code" my-code
