@@ -21,13 +21,12 @@
         <entry key="df3901b1-4306-4c22-9990-4c13619272a2">
           <value>
             <DockerContainerSettings>
-              <option name="publishAllPorts" value="true" />
               <option name="version" value="1" />
               <option name="volumeBindings">
                 <list>
                   <DockerVolumeBindingImpl>
                     <option name="containerPath" value="/app" />
-                    <option name="hostPath" value="/app" />
+                    <option name="hostPath" value="/c/priv/hotelbookingwebapp" />
                   </DockerVolumeBindingImpl>
                 </list>
               </option>

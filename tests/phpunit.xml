@@ -1,0 +1,11 @@
+<phpunit bootstrap="/app/autoload.php">
+    <testsuites>
+        <testsuite name="hotelbookingwebapp\core">
+            <directory>/app/tests/core</directory>
+        </testsuite>
+
+        <testsuite name="hotelbookingwebapp\module">
+            <directory>/app/tests/module</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>

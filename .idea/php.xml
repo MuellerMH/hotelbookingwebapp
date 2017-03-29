@@ -751,7 +751,7 @@
   <component name="PhpUnit">
     <phpunit_settings>
       <PhpUnitSettings load_method="PHPUNIT_PHAR" custom_loader_path="" phpunit_phar_path="" />
-      <phpunit_by_interpreter interpreter_id="df3901b1-4306-4c22-9990-4c13619272a2" load_method="PHPUNIT_PHAR" bootstrap_file_path="autoload.php" configuration_file_path="opt/project/phpunit.xml.dist" custom_loader_path="/var/www/hotelbookingwebapp" phpunit_phar_path="/usr/local/bin/phpunit" use_bootstrap_file="true" />
+      <phpunit_by_interpreter interpreter_id="df3901b1-4306-4c22-9990-4c13619272a2" load_method="PHPUNIT_PHAR" bootstrap_file_path="/app/autoload.php" configuration_file_path="/app/tests/phpunit.xml" custom_loader_path="" phpunit_phar_path="/usr/local/bin/phpunit" use_bootstrap_file="true" use_configuration_file="true" />
     </phpunit_settings>
   </component>
 </project>
