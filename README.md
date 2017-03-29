@@ -63,4 +63,4 @@ MySQL Workbench
 
 
 # start phpunit testing
-docker run -i -t --rm -v "$(pwd):/code" my-code
+docker run -v c:\priv\hotelbookingwebapp:/app --rm phpunit/phpunit --bootstrap autoload.php tests

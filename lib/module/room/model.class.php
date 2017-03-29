@@ -14,12 +14,12 @@ class Model {
 
 	private $update = false;
 
-	public __construct($data='') {
+	public function __construct($data='') {
 
 	}
 
 
-	public __destruct() {
+	public function __destruct() {
 		if ( $this->update ) {
 			// save
 		}
@@ -43,7 +43,7 @@ class Model {
      *
      * @return self
      */
-    private function _setId($id)
+    public function _setId($id)
     {
         $this->id = $id;
         $this->update = true;

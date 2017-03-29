@@ -1,3 +1,10 @@
+<?php 	
+require_once '../lib/module/room/model.class.php';
+$class = new \lib\module\room\Model();
+$class->_setId(1);
+
+ ?>
+
 <!DOCTYPE html>
 <html>
 <head>
