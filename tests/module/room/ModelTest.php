@@ -14,7 +14,7 @@ final class ModelTest extends TestCase
  	/**
      * @beforeClass
      */
-	public function setupModelObject() 
+	public function setupModelObject()
 	{
 		$this->testObject = new Model();
 	}

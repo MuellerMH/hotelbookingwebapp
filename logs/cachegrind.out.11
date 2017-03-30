@@ -1258,3 +1258,93 @@ fl=(1)
 fn=(5) lib\module\room\Model->__destruct
 22 4
 
+
+==== NEW PROFILING FILE ==============================================
+version: 1
+creator: xdebug 2.5.1 (PHP 7.1.3-2+deb.sury.org~xenial+1)
+cmd: /var/www/hotelbookingwebapp/public/index.php
+part: 1
+positions: line
+
+events: Time
+
+fl=(1) /var/www/hotelbookingwebapp/lib/module/room/model.class.php
+fn=(1) require_once::/var/www/hotelbookingwebapp/lib/module/room/model.class.php
+1 6
+
+fl=(1)
+fn=(2) lib\module\room\Model->__construct
+17 0
+
+fl=(1)
+fn=(3) lib\module\room\Model->_setId
+46 11
+
+fl=(2) /var/www/hotelbookingwebapp/public/index.php
+fn=(4) {main}
+
+summary: 195
+
+1 176
+cfl=(1)
+cfn=(1)
+calls=1 0 0
+2 6
+cfl=(1)
+cfn=(2)
+calls=1 0 0
+3 0
+cfl=(1)
+cfn=(3)
+calls=1 0 0
+4 11
+
+fl=(1)
+fn=(5) lib\module\room\Model->__destruct
+22 1
+
+
+==== NEW PROFILING FILE ==============================================
+version: 1
+creator: xdebug 2.5.1 (PHP 7.1.3-2+deb.sury.org~xenial+1)
+cmd: /var/www/hotelbookingwebapp/public/index.php
+part: 1
+positions: line
+
+events: Time
+
+fl=(1) /var/www/hotelbookingwebapp/lib/module/room/model.class.php
+fn=(1) require_once::/var/www/hotelbookingwebapp/lib/module/room/model.class.php
+1 0
+
+fl=(1)
+fn=(2) lib\module\room\Model->__construct
+17 0
+
+fl=(1)
+fn=(3) lib\module\room\Model->_setId
+46 1
+
+fl=(2) /var/www/hotelbookingwebapp/public/index.php
+fn=(4) {main}
+
+summary: 759
+
+1 755
+cfl=(1)
+cfn=(1)
+calls=1 0 0
+2 0
+cfl=(1)
+cfn=(2)
+calls=1 0 0
+3 0
+cfl=(1)
+cfn=(3)
+calls=1 0 0
+4 1
+
+fl=(1)
+fn=(5) lib\module\room\Model->__destruct
+22 2
+

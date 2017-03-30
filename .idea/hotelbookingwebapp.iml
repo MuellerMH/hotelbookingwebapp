@@ -7,10 +7,10 @@
     <orderEntry type="module-library">
       <library name="PHP" type="php">
         <CLASSES>
-          <root url="file://$APPLICATION_HOME_DIR$/bin" />
+          <root url="file://$USER_HOME$/Desktop" />
         </CLASSES>
         <SOURCES>
-          <root url="file://$APPLICATION_HOME_DIR$/bin" />
+          <root url="file://$USER_HOME$/Desktop" />
         </SOURCES>
       </library>
     </orderEntry>

@@ -24,7 +24,7 @@
 			"file": "phpdocker/php-fpm/php-ini-overrides.ini",
 			"settings":
 			{
-				"buffer_size": 442,
+				"buffer_size": 413,
 				"line_ending": "Unix"
 			}
 		},
@@ -49,7 +49,7 @@
 			"file": "logs/xdebug.log",
 			"settings":
 			{
-				"buffer_size": 173541,
+				"buffer_size": 195081,
 				"line_ending": "Unix"
 			}
 		},
@@ -57,7 +57,7 @@
 			"file": "logs/cachegrind.out.10",
 			"settings":
 			{
-				"buffer_size": 11659,
+				"buffer_size": 20392,
 				"line_ending": "Unix"
 			}
 		},
@@ -65,7 +65,7 @@
 			"file": "logs/cachegrind.out.11",
 			"settings":
 			{
-				"buffer_size": 11647,
+				"buffer_size": 20385,
 				"line_ending": "Unix"
 			}
 		},
@@ -413,7 +413,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 442,
+						"buffer_size": 413,
 						"regions":
 						{
 						},
@@ -757,7 +757,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 173541,
+						"buffer_size": 195081,
 						"regions":
 						{
 						},
@@ -860,15 +860,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 11659,
+						"buffer_size": 20392,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								10928,
-								10928
+								0,
+								0
 							]
 						],
 						"settings":
@@ -963,15 +963,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 11647,
+						"buffer_size": 20385,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								11592,
-								11592
+								11523,
+								11523
 							]
 						],
 						"settings":
@@ -1563,9 +1563,13 @@
 	"select_project":
 	{
 		"height": 1053.0,
-		"last_filter": "",
+		"last_filter": "wo",
 		"selected_items":
 		[
+			[
+				"wo",
+				"C:\\Users\\mhm\\Documents\\sublime_projekts\\worldvalue.sublime-workspace"
+			],
 			[
 				"",
 				"C:\\Users\\mhm\\Documents\\sublime_projekts\\hwsconnect.sublime-project"
@@ -1582,7 +1586,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 2,
+	"selected_group": 0,
 	"settings":
 	{
 		"xdebug":

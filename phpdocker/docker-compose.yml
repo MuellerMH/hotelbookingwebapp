@@ -33,6 +33,11 @@ hotelbookingwebapp-php-fpm:
     - ./php-fpm/php-ini-overrides.ini:/etc/php/7.1/fpm/conf.d/99-overrides.ini
   links:
     - hotelbookingwebapp-mysql
+  environment:
+    - MYSQL_DATABASE=hotelbookingwebapp
+    - MYSQL_USER=hbwa
+    - MYSQL_PASSWORD=test
+    - MYSQL_HOST=hotelbookingwebapp-mysql
   ports:
     - 9901:9901
     - 9000:9000
