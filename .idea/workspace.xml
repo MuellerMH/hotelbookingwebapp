@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="61682e6a-7ccd-4eb4-9613-628be654adfe" name="Default" comment="add phpunit config">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/database_schema.mwb.bak" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hotelbookingwebapp.sublime-project" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hotelbookingwebapp.sublime-workspace" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/hotelbookingwebapp.iml" afterPath="$PROJECT_DIR$/.idea/hotelbookingwebapp.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/php-docker-settings.xml" afterPath="$PROJECT_DIR$/.idea/php-docker-settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/autoload.php" afterPath="$PROJECT_DIR$/autoload.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/core/DatabaseTest.php" afterPath="$PROJECT_DIR$/tests/core/DatabaseTest.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -42,7 +34,7 @@
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
-              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <caret line="3" column="6" lean-forward="false" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -452,7 +444,7 @@
       <workItem from="1491040278866" duration="34000" />
       <workItem from="1491040326198" duration="5752000" />
       <workItem from="1491047764478" duration="218000" />
-      <workItem from="1491048057501" duration="94000" />
+      <workItem from="1491048057501" duration="134000" />
     </task>
     <servers />
   </component>
@@ -489,7 +481,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28310000" />
+    <option name="totallyTimeSpent" value="28350000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -936,7 +928,7 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <caret line="3" column="6" lean-forward="false" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
           <folding />
         </state>
       </provider>
