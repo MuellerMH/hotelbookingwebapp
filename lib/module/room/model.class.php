@@ -1,6 +1,6 @@
 <?php 
 namespace lib\module\room;
-class Model {
+class Model extends \lib\core\Model {
 
 	private $id;
 	private $userId;
@@ -43,7 +43,7 @@ class Model {
      *
      * @return self
      */
-    public function _setId($id)
+    public function setId($id)
     {
         $this->id = $id;
         $this->update = true;
@@ -67,7 +67,7 @@ class Model {
      *
      * @return self
      */
-    private function _setUserId($userId)
+    private function setUserId($userId)
     {
         $this->userId = $userId;
         $this->update = true;
@@ -92,7 +92,7 @@ class Model {
      *
      * @return self
      */
-    private function _setLabel($label)
+    private function setLabel($label)
     {
         $this->label = $label;
         $this->update = true;
@@ -117,7 +117,7 @@ class Model {
      *
      * @return self
      */
-    private function _setDescription($description)
+    private function setDescription($description)
     {
         $this->description = $description;
         $this->update = true;
@@ -142,7 +142,7 @@ class Model {
      *
      * @return self
      */
-    private function _setSize($size)
+    private function setSize($size)
     {
         $this->size = $size;
         $this->update = true;
@@ -167,7 +167,7 @@ class Model {
      *
      * @return self
      */
-    private function _setOccMin($occMin)
+    private function setOccMin($occMin)
     {
         $this->occMin = $occMin;
         $this->update = true;
@@ -192,7 +192,7 @@ class Model {
      *
      * @return self
      */
-    private function _setOccMax($occMax)
+    private function setOccMax($occMax)
     {
         $this->occMax = $occMax;
         $this->update = true;
@@ -217,7 +217,7 @@ class Model {
      *
      * @return self
      */
-    private function _setBeds($beds)
+    private function setBeds($beds)
     {
         $this->beds = $beds;
         $this->update = true;
@@ -242,7 +242,7 @@ class Model {
      *
      * @return self
      */
-    private function _setBreakfast($breakfast)
+    private function setBreakfast($breakfast)
     {
         $this->breakfast = $breakfast;
         $this->update = true;
