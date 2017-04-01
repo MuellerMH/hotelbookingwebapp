@@ -1,4 +1,6 @@
 #
 logs/
+**/*.bak
 *.bak
-.idea/
+.*
+!/.gitignore
