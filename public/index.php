@@ -1,10 +1,8 @@
-<?php 	
-require_once '../lib/module/room/model.class.php';
-$class = new \lib\module\room\Model();
-$class->_setId(1);
-
- ?>
-
+<?php
+require '../autoload.php';
+$Model = new \lib\module\room\Model();
+$Model->getId();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,8 +17,5 @@ $class->_setId(1);
 		<li>Setting up PHPUnit with Docker</li>
 		<li>Setting up MariaDB with Docker</li>
 	</ul>
-
-	only a test stream to check the setup and settings
-	
 </body>
 </html>

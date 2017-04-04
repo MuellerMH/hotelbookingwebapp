@@ -27,6 +27,8 @@ hotelbookingwebapp-php-fpm:
     - MYSQL_USER=hbwa
     - MYSQL_PASSWORD=test
     - MYSQL_HOST=hotelbookingwebapp-mysql
+  ports:
+   - "9901:9901"
 
 hotelbookingwebapp-webserver:
   image: phpdockerio/nginx:latest
@@ -35,6 +37,6 @@ hotelbookingwebapp-webserver:
       - ..:/var/www/hotelbookingwebapp
       - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
   ports:
-   - "8088:80"
+   - "8080:80"
   links:
    - hotelbookingwebapp-php-fpm

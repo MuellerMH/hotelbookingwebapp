@@ -45,7 +45,7 @@ final class DatabaseTest extends TestCase {
     public function testRowCount(){
         $this->testObject = Database::getConnection();
         $this->testObject->prepare('SHOW TABLES')->execute();
-        $this->assertGreaterThan(1,$this->testObject->rowCount());
+        $this->assertGreaterThan(0,$this->testObject->rowCount());
     }
 
     public function testError() {

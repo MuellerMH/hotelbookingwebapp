@@ -5,8 +5,12 @@
 * Setting up PHPUnit with Docker
 * Setting up MariaDB with Docker
 
-*** Session Start ***
-* What is Docker
+***Session Start***
 * Create a fast Docker Compose Setup with phpdocker.io
 * Make changes to the Docker files
 ** Add Port to the Database Container to connect directly to the Database with MySQL Workbench
+* Test Connection
+
+
+
+

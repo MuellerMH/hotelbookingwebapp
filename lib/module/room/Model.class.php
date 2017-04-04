@@ -15,7 +15,7 @@ class Model extends \lib\core\Model {
 	private $update = false;
 
 	public function __construct($data='') {
-
+        return $this;
 	}
 
 
