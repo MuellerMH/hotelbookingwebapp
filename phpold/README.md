@@ -40,7 +40,7 @@ You can access your application via **`localhost`**, if you're running the conta
 
 Service|Address outside containers|Address outside VM
 ------|---------|-----------
-Webserver|[localhost:8080](http://localhost:8080)|[192.168.33.68](http://192.168.33.68)
+Webserver|[localhost:8088](http://localhost:8088)|[192.168.33.68](http://192.168.33.68)
 
 ##Hosts within your environment##
 

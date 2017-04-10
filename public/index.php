@@ -1,8 +1,3 @@
-<?php
-require '../autoload.php';
-$Model = new \lib\module\room\Model();
-$Model->getId();
-?>
 <!DOCTYPE html>
 <html>
 <head>

@@ -1,9 +1,7 @@
 <phpunit bootstrap="/app/autoload.php">
     <testsuites>
-
         <testsuite name="hotelbookingwebapp">
             <directory>/app/tests/</directory>
         </testsuite>
-
     </testsuites>
 </phpunit>

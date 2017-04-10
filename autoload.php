@@ -13,7 +13,7 @@ spl_autoload_register(function ($name) {
         require  $ClassPath  . '/' . ucfirst($ClassName). '.abstract.php';
         //echo  '.interface.php' . " ...done\n";
     } else if (file_exists($ClassPath  . '/' . ucfirst($ClassName).'.interface.php')) {
-        require  $ClassPath  . '/' . ucfirst($ClassName). '.abstract.php';
+        require  $ClassPath  . '/' . ucfirst($ClassName). '.interface.php';
         //echo '.abstract.php'. " ...done\n";
     } else {
         //echo " ...failed\n";
