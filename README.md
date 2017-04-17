@@ -34,7 +34,7 @@ Weekly 20 pm UTC +1 Europe time on Monday
 * Setting up MariaDB with Docker
 
 **Session 2:** In the second session we create a database model, the PHP model and the PHP controller, and a simple micro service
-
+Session Start at 20:00 CET on 17.04.2017
 * Database model
 * PHP Model
 * PHP Controller
