@@ -52,7 +52,7 @@ class Model
      * @param mixed $id
      * @return array
      */
-    public function setId($id)
+    public function setId(int $id)
     {
         $arrayChangeLog = array('Id'=>true,"oldValue"=>$this->id,"newValue"=>$id);
         array_push($this->changes,$arrayChangeLog);

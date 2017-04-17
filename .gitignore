@@ -4,3 +4,4 @@ logs/
 *.bak
 .*
 !/.gitignore
+phpold/
