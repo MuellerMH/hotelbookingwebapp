@@ -6,18 +6,21 @@ class Model
 {
 
     private $id;
-    private $dtCreateDate;
-    private $dtArrival;
-    private $dtDeparture;
-    private $sCurrency;
-    private $fTotalPrice;
+    public $dtCreateDate;
+    public $dtArrival;
+    public $dtDeparture;
+    public $sCurrency;
+    public $fTotalPrice;
 
-    private $iGuestId;
+    public $iGuestId;
 
     private $changes = [];
 
-    public function __construct($id=null)
+    private $dbConnection;
+
+    public function __construct($id=null, $DB)
     {
+        $this->dbConnection = $DB;
         if ( !is_null($id) )
         {
             if (is_array($id) )  {
@@ -31,7 +34,10 @@ class Model
 
     private function exchangeData(array $array)
     {
-
+        $this->setArrival($array['arrival']);
+        $this->setDeparture($array['departure']);
+        $this->setCurrency($array['currency']);
+        $this->setTotalPrice($array['total_price']); // danger
     }
 
     private function loadModel(int $id)
@@ -71,9 +77,9 @@ class Model
     /**
      * @return mixed
      */
-    public function getArrival()
+    public function getArrival($format='Y-m-d hh:nn:ss')
     {
-        return $this->dtArrival;
+        return $this->dtArrival->format($format);
     }
 
     /**
@@ -91,9 +97,9 @@ class Model
     /**
      * @return mixed
      */
-    public function getDeparture()
+    public function getDeparture($format='Y-m-d hh:nn:ss')
     {
-        return $this->dtDeparture;
+        return $this->dtDeparture->format($format);
     }
 
     /**
@@ -168,10 +174,17 @@ class Model
         return $arrayChangeLog;
     }
 
+    public function save()
+    {   
+        $this->dbConnection->save($this);
+        $this->setId($this->dbConnection->getInsertID());
+        return $this;
+    }
 
-
-
-
-
-
+    public function __destruct()
+    {
+        if ( count($this->changes) ) {
+            $this->save();         
+        }
+    }
 }
