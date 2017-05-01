@@ -40,3 +40,15 @@ hbwa-webserver:
    - "8080:80"
   links:
    - hbwa-php-fpm
+
+
+hbwa-api-server:
+  image: phpdockerio/nginx:latest
+  container_name: hbwa-api-server
+  volumes:
+      - ..:/var/www/hbwa
+      - ./nginx/nginx-api.conf:/etc/nginx/conf.d/default.conf
+  ports:
+   - "3333:80"
+  links:
+   - hbwa-php-fpm

@@ -1,0 +1,24 @@
+<div class="jumbotron text-center">
+    <h1>Booking App</h1>
+
+    <p>{{ message }}</p>
+</div>
+<div class="container">
+  <form>
+  	<div class="form-control">
+  		<label>Currency</label><input type="text" ng-model="reservation.currency">
+  	</div>
+  	<div class="form-control">
+  		<label>Arrival</label><input type="date" ng-model="reservation.arrival">
+  	</div>
+  	<div class="form-control">
+  		<label>Depature</label><input type="date" ng-model="reservation.departure">
+  	</div>
+  	<div class="form-control">
+  		<label>Price</label><input type="text" ng-model="reservation.total_price">
+  	</div>
+  	<div class="form-control">
+  		<button ng-click="createReservation()">book</button>
+  	</div>
+  </form>
+</div>

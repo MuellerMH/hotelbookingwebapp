@@ -5,3 +5,4 @@ logs/
 .*
 !/.gitignore
 phpold/
+public/bower_components

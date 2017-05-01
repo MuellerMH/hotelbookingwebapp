@@ -12,14 +12,14 @@ class Dal {
     {
         return '
             SELECT 
-                isreservation,
+                idreservation,
                 reservation_createdate,
                 reservation_arrival,
-                reservation_depature,
+                reservation_departure,
                 reservation_currency,
                 reservation_total_price 
             FROM 
-                reservation_arrival
+                reservation
         ';
     }
     private function getWhereById() 

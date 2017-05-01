@@ -1,0 +1,22 @@
+{
+  "name": "hotelbookingwebapp",
+  "homepage": "https://github.com/MuellerMH/hotelbookingwebapp",
+  "authors": [
+    "Manuel 'Onko' Müller <mueller.m.h@gmail.com>"
+  ],
+  "description": "hotel booking web app frontend",
+  "main": "main.html",
+  "keywords": [
+    "hotel",
+    "web",
+    "php",
+    "angular"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "angular": "angularjs#^1.6.4",
+    "angular-route": "^1.6.4",
+    "bootstrap": "^3.3.7"
+  }
+}

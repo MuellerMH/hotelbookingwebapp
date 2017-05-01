@@ -26,4 +26,23 @@ class Controller
 		$Model = new Model($this->userData,new DAL($this->dataBaseConnection));
 		return $Model;
 	}
+
+	public function actionPost( $postData) {
+
+	}
+
+	public function actionGet( ) {
+		$dal = new DAL($this->dataBaseConnection);
+
+		return $dal->getAll();
+	}
+
+
+	public function actionPut( $postData) {
+		return false;
+	}
+
+	public function actionDelete( $id='') {
+		return false;
+	}
 }
