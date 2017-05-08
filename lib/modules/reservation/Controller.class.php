@@ -37,6 +37,12 @@ class Controller
 		return $dal->getAll();
 	}
 
+	public function actionGetById( $id ) {
+		$dal = new DAL($this->dataBaseConnection);
+
+		return $dal->getById($id);
+	}
+
 
 	public function actionPut( $postData) {
 		return false;

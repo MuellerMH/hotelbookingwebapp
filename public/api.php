@@ -13,44 +13,48 @@ header('Content-Type: application/json');
 	->GET: show id model
 	->POST: denied
 	->PUT: update the model
-	->DELETE: delete the mode
+	->DELETE: delete the model
 
 */
 
 $routes = [];
-$routes['/reservation'] = [
+$routes['/reservation/:id'] = [
 	'POST'=>[
 		'controller'=>'lib\modules\reservation\Controller',
-		'method'=>'Post'
+		'methode'=>'Post'
 	],
 	'GET'=>[
 		'controller'=>'lib\modules\reservation\Controller',
-		'method'=>'Get'
+		'methode'=>'GetById'
+	]
+];
+$routes['/reservation'] = [
+	'POST'=>[
+		'controller'=>'lib\modules\reservation\Controller',
+		'methode'=>'Post'
+	],
+	'GET'=>[
+		'controller'=>'lib\modules\reservation\Controller',
+		'methode'=>'Get'
 	]
 ];
 // REQUEST_METHOD
 // REQUEST_URI
 
-
-
-$DB = lib\Core\Database::getDB(
-	array(
-        'MYSQL_HOST'=>'172.17.0.2',
-        'MYSQL_DATABASE'=>'hbwa',
-        'MYSQL_USER'=>'hbwa',
-        'MYSQL_PASSWORD'=>'test'
-	)
-);
 try{
-	if ( empty($routes[$_SERVER['REQUEST_URI']]) || empty($routes[$_SERVER['REQUEST_URI']][$_SERVER['REQUEST_METHOD']]))
-		echo json_encode("not yet implemented say bye bey and have nice day");
-
-
-	$controllerName = $routes[$_SERVER['REQUEST_URI']][$_SERVER['REQUEST_METHOD']]['controller'];
-	$controllerMethod = 'action'.ucFirst($routes[$_SERVER['REQUEST_URI']][$_SERVER['REQUEST_METHOD']]['method']); 
-
-	$Controller = new $controllerName ( $DB );
-	$result = $Controller->{$controllerMethod}();
+	$DB = lib\Core\Database::getDB(
+		array(
+	        'MYSQL_HOST'=>'172.17.0.2',
+	        'MYSQL_DATABASE'=>'hbwa',
+	        'MYSQL_USER'=>'hbwa',
+	        'MYSQL_PASSWORD'=>'test'
+		)
+	);
+	$APIController = new  lib\Core\API($DB);
+	$APIController->setRoutes($routes);
+	$APIController->parseUrl($_SERVER['REQUEST_URI']);
+	$APIController->setRequestMethode($_SERVER['REQUEST_METHOD']);
+	$result = $APIController->callController();
 
 	echo json_encode($result);
 
