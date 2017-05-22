@@ -87,16 +87,6 @@ final class ApiTest extends TestCase
                 'MYSQL_PASSWORD'=>'test'
         	)
         );
- 		$routes['/reservation'] = [
-			'POST'=>[
-				'controller'=>'lib\modules\reservation\Controller',
-				'method'=>'Post'
-			],
-			'GET'=>[
-				'controller'=>'lib\modules\reservation\Controller',
-				'method'=>'Get'
-			]
-		];
 		$routes['/reservation/:id'] = [
 			'POST'=>[
 				'controller'=>'lib\modules\reservation\Controller',
@@ -105,6 +95,16 @@ final class ApiTest extends TestCase
 			'GET'=>[
 				'controller'=>'lib\modules\reservation\Controller',
 				'methode'=>'GetById'
+			]
+		];
+ 		$routes['/reservation'] = [
+			'POST'=>[
+				'controller'=>'lib\modules\reservation\Controller',
+				'method'=>'Post'
+			],
+			'GET'=>[
+				'controller'=>'lib\modules\reservation\Controller',
+				'method'=>'Get'
 			]
 		];
 		$APIController = new API($DB);

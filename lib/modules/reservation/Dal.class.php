@@ -85,7 +85,7 @@ class Dal {
         ));
     }
 
-    public function delete()
+    public function delete($id)
     {
         $sqlString = 'DELETE FROM reservation ' . $this->getWhereById();
         $this->dbConnection->execute($sqlString,array('id'=>$id));

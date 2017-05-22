@@ -1,8 +1,8 @@
 <?php
 namespace lib\modules\reservation;
+use lib\Core\Controller;
 
-
-class Controller
+class Controller extends Controller
 {
 	private $userData;
 	private $dataBaseConnection;

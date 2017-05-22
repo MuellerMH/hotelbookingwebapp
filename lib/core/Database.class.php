@@ -11,7 +11,11 @@ class Database
 
     private function __construct($host, $dbName, $user, $password)
     {
-        $this->connection = new \PDO("mysql:host=$host;port=3306;dbname=$dbName",$user,$password);
+        $this->connection = new \PDO("mysql:host=$host;port=3306;dbname=$dbName",$user,$password, array(
+            \PDO::ATTR_EMULATE_PREPARES=>false,
+            \PDO::MYSQL_ATTR_DIRECT_QUERY=>false,
+            \PDO::ATTR_ERRMODE=>\PDO::ERRMODE_EXCEPTION
+        ));
     }
     static function setConfig(array $conf)
     {
