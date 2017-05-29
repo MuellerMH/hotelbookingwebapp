@@ -70,9 +70,70 @@ final class ApiTest extends TestCase
         	)
         );
         
+		$routes['/reservation/:id'] = [
+			'POST'=>[
+				'controller'=>'lib\modules\reservation\Controller',
+				'methode'=>'Post'
+			],
+			'GET'=>[
+				'controller'=>'lib\modules\reservation\Controller',
+				'methode'=>'GetById'
+			]
+		];
+ 		$routes['/reservation'] = [
+			'POST'=>[
+				'controller'=>'lib\modules\reservation\Controller',
+				'method'=>'Post'
+			],
+			'GET'=>[
+				'controller'=>'lib\modules\reservation\Controller',
+				'method'=>'Get'
+			]
+		];
 		$APIController = new API($DB);
+		$APIController->setRoutes($routes);
+		$APIController->setRequestMethode("GET");
 		$result = $APIController->parseUrl($simulateSERVER['REQUEST_URI']);
 		$this->assertEquals('/reservation',$result);
+	}
+
+	public function testParseURLWithPlaceHolder() {
+		$simulateSERVER['REQUEST_URI'] = '/reservation/123';
+		$simulateSERVER['REQUEST_METHOD'] = 'GET';
+		$DB = Database::getDB(
+			array(
+                'MYSQL_HOST'=>'172.17.0.2',
+                'MYSQL_DATABASE'=>'hbwa',
+                'MYSQL_USER'=>'hbwa',
+                'MYSQL_PASSWORD'=>'test'
+        	)
+        );
+        
+		$routes['/reservation/:id'] = [
+			'POST'=>[
+				'controller'=>'lib\modules\reservation\Controller',
+				'methode'=>'Post'
+			],
+			'GET'=>[
+				'controller'=>'lib\modules\reservation\Controller',
+				'methode'=>'GetById'
+			]
+		];
+ 		$routes['/reservation'] = [
+			'POST'=>[
+				'controller'=>'lib\modules\reservation\Controller',
+				'method'=>'Post'
+			],
+			'GET'=>[
+				'controller'=>'lib\modules\reservation\Controller',
+				'method'=>'Get'
+			]
+		];
+		$APIController = new API($DB);
+		$APIController->setRoutes($routes);
+		$APIController->setRequestMethode($simulateSERVER['REQUEST_METHOD']);
+		$result = $APIController->parseUrl($simulateSERVER['REQUEST_URI']);
+		$this->assertEquals('/reservation/:id',$result);
 	}
 
 	public function testLoadController() {
@@ -109,13 +170,14 @@ final class ApiTest extends TestCase
 		];
 		$APIController = new API($DB);
 		$APIController->setRoutes($routes);
+		$APIController->setRequestMethode($simulateSERVER['REQUEST_METHOD']);
 		$APIController->parseUrl($simulateSERVER['REQUEST_URI']);
 		$result = $APIController->getController();
 		$this->assertEquals(get_class($result),'lib\modules\reservation\Controller');
 	}
 
 	public function testCallControllerMethod(){
-		$simulateSERVER['REQUEST_URI'] = '/reservation/1';
+		$simulateSERVER['REQUEST_URI'] = '/reservation';
 		$simulateSERVER['REQUEST_METHOD'] = 'GET';
 		$DB = Database::getDB(
 			array(
@@ -138,9 +200,9 @@ final class ApiTest extends TestCase
 		];
 		$APIController = new API($DB);
 		$APIController->setRoutes($routes);
+		$APIController->setRequestMethode($simulateSERVER['REQUEST_METHOD']);
 		$APIController->parseUrl($simulateSERVER['REQUEST_URI']);
 		$Controller = $APIController->getController();
-		$APIController->getRequestMethode	($simulateSERVER['REQUEST_METHOD']);
 		$this->assertEquals(true,method_exists($Controller,"actionGet"));
 
 	}
@@ -169,6 +231,7 @@ final class ApiTest extends TestCase
 		];
 		$APIController = new API($DB);
 		$APIController->setRoutes($routes);
+		$APIController->setRequestMethode($simulateSERVER['REQUEST_METHOD']);
 		$result = $APIController->getRoute($simulateSERVER['REQUEST_URI']);
 		
 		$result = $result[$simulateSERVER['REQUEST_METHOD']]['method'];

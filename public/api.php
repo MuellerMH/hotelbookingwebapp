@@ -2,6 +2,7 @@
 error_reporting(E_ALL);
 include_once '../autoload.php';
 header('Content-Type: application/json');
+header('Access-Control-Allow-Origin: *');
 /*
 /reservation
 	->GET:show all
@@ -19,10 +20,6 @@ header('Content-Type: application/json');
 
 $routes = [];
 $routes['/reservation/:id'] = [
-	'POST'=>[
-		'controller'=>'lib\modules\reservation\Controller',
-		'methode'=>'Post'
-	],
 	'GET'=>[
 		'controller'=>'lib\modules\reservation\Controller',
 		'methode'=>'GetById'
@@ -36,6 +33,18 @@ $routes['/reservation'] = [
 	'GET'=>[
 		'controller'=>'lib\modules\reservation\Controller',
 		'methode'=>'Get'
+	]
+];
+$routes['/room'] = [
+	'GET'=>[
+		'controller'=>'lib\modules\room\Controller',
+		'methode'=>'Get'
+	]
+];
+$routes['/room/:id'] = [
+	'GET'=>[
+		'controller'=>'lib\modules\room\Controller',
+		'methode'=>'GetById'
 	]
 ];
 // REQUEST_METHOD
@@ -52,8 +61,8 @@ try{
 	);
 	$APIController = new  lib\Core\API($DB);
 	$APIController->setRoutes($routes);
-	$APIController->parseUrl($_SERVER['REQUEST_URI']);
 	$APIController->setRequestMethode($_SERVER['REQUEST_METHOD']);
+	$APIController->parseUrl($_SERVER['REQUEST_URI']);
 	$result = $APIController->callController();
 
 	echo json_encode($result);

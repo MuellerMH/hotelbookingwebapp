@@ -37,8 +37,8 @@
         	total_price: 1000
         };
 
-        $scope.createReservation = function() {
-        	alert('click');
+        $scope.createReservation = function(id) {
+        	alert('click id ' + id );
         }
 
     });
@@ -50,3 +50,27 @@
     App.controller('contactController', function($scope) {
         $scope.message = 'Contact us! JK. This is just a demo.';
     });
+
+    App.controller('roomsController', function($scope, $http) {
+        $scope.rooms = [];
+        $http.get("http://localhost:3333/room")
+        .then(function(res){console.log(res);
+            res.data.forEach(function(room){
+                $scope.rooms.push(room);
+            });
+        },function(res){
+
+        });
+        $scope.getRooms = function() {
+            $http.get("http://localhost:3333/room")
+            .then(function(res){
+                res.forEach(function(room){
+                    rooms.push(room);
+                });
+            },function(res){
+
+            });
+
+        };
+    });
+        

@@ -178,6 +178,7 @@ class Model
     {   
         $this->dbConnection->save($this);
         $this->setId($this->dbConnection->getInsertID());
+        $this->changes = [];
         return $this;
     }
 

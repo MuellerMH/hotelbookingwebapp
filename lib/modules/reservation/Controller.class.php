@@ -1,8 +1,8 @@
 <?php
 namespace lib\modules\reservation;
-use lib\Core\Controller;
+use lib\Core\Controller as coreController;
 
-class Controller extends Controller
+class Controller extends coreController
 {
 	private $userData;
 	private $dataBaseConnection;
@@ -26,20 +26,18 @@ class Controller extends Controller
 		$Model = new Model($this->userData,new DAL($this->dataBaseConnection));
 		return $Model;
 	}
-
+	
 	public function actionPost( $postData) {
 
 	}
 
 	public function actionGet( ) {
 		$dal = new DAL($this->dataBaseConnection);
-
 		return $dal->getAll();
 	}
 
 	public function actionGetById( $id ) {
 		$dal = new DAL($this->dataBaseConnection);
-
 		return $dal->getById($id);
 	}
 

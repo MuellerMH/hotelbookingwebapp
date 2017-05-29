@@ -1,24 +1,41 @@
 <div class="jumbotron text-center">
     <h1>Booking App</h1>
-
     <p>{{ message }}</p>
 </div>
 <div class="container">
-  <form>
-  	<div class="form-control">
-  		<label>Currency</label><input type="text" ng-model="reservation.currency">
-  	</div>
-  	<div class="form-control">
-  		<label>Arrival</label><input type="date" ng-model="reservation.arrival">
-  	</div>
-  	<div class="form-control">
-  		<label>Depature</label><input type="date" ng-model="reservation.departure">
-  	</div>
-  	<div class="form-control">
-  		<label>Price</label><input type="text" ng-model="reservation.total_price">
-  	</div>
-  	<div class="form-control">
-  		<button ng-click="createReservation()">book</button>
-  	</div>
+  <form class="form-inline container ">
+    <div class="reservation-form jumbotron col-lg-12 col-md-12 col-sm-12">
+      <div class="row form-group">
+        <div class="form-control col-lg-6 col-md-6 col-sm-12">
+          <label>Arrival</label><input type="date" ng-model="reservation.arrival">
+        </div>
+        <div class="form-control col-lg-6 col-md-6 col-sm-12">
+          <label>Depature</label><input type="date" ng-model="reservation.departure">
+        </div>
+      </div>
+      <input type="hidden" ng-model="reservation.currency">
+      <input type="hidden" ng-model="reservation.total_price">
+    </div>
+    <div class="rooms container" ng-controller="roomsController" >
+      <div ng-repeat="room in rooms" class="room row col-md-12 col-lg-12 col-sm-12">
+      {{room|json}}
+          <img src="{{room.image}}" class="col-lg-6 col-md-8 col-sm-12">
+          <div class="col-lg-6 col-md-4 col-sm-12">
+            <h2 class="room header">{{room.room_label}}</h2>
+            <div class="roomo price pull-right">{{room.price}} $</div>
+            <div class="room description">
+              {{room.room_description}}             
+            </div>
+          </div>
+          <div class="room extras col-lg-6 col-md-4 col-sm-12">
+            <ul>
+              <li ng-repeat="extra in room.extras">{{extra}}</li>
+            </ul>
+          </div>
+        <div class="iv-control-control pull-right">
+          <button ng-click="createReservation(room.id)">book</button>
+        </div>
+      </div>
+    </div>
   </form>
 </div>
