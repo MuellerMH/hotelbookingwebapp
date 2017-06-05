@@ -36,7 +36,6 @@ class Controller extends AController
 
 	public function actionGet(){
 		$dal = new Dal($this->dataBaseConnection);
-
 		return $dal->getAll();
 	}
 

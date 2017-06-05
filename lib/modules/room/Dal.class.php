@@ -13,7 +13,7 @@ class Dal
     private function getSQLString () 
     {
         return '
-            SELECT 
+            SELECT  
                 id_room,
                 user_id,
                 room_label,
@@ -22,9 +22,19 @@ class Dal
                 room_occ_min,
                 room_occ_max,
                 room_beds,
-                room_breakfast
+                room_breakfast,
+                media.media_url as image,
+                prices.price_per_night as price
             FROM 
                 room
+                
+            LEFT JOIN room_has_prices ON room_has_prices.room_idroom = room.id_room
+            LEFT JOIN prices ON room_has_prices.prices_idprices = prices.idprices
+            
+            LEFT JOIN room_has_media ON room_has_media.room_idroom = room.id_room 
+            LEFT JOIN media ON room_has_media.media_idmedia = media.idmedia
+            
+            
         ';
     }
     private function getWhereById() 

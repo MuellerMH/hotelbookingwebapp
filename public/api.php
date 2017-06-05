@@ -47,6 +47,7 @@ $routes['/room/:id'] = [
 		'methode'=>'GetById'
 	]
 ];
+
 // REQUEST_METHOD
 // REQUEST_URI
 

@@ -18,7 +18,6 @@
     </div>
     <div class="rooms container" ng-controller="roomsController" >
       <div ng-repeat="room in rooms" class="room row col-md-12 col-lg-12 col-sm-12">
-      {{room|json}}
           <img src="{{room.image}}" class="col-lg-6 col-md-8 col-sm-12">
           <div class="col-lg-6 col-md-4 col-sm-12">
             <h2 class="room header">{{room.room_label}}</h2>
